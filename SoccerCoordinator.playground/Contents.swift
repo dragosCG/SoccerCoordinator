@@ -1,3 +1,6 @@
+
+// creating every player as dictionary
+
 var player0: [String: String] = [
     "Name": "Joe Smith",
     "Height":"42",
@@ -109,7 +112,7 @@ var player17: [String: String] = [
     "Soccer Experience":"YES",
     "Guardian Name":"Hyman and Rachel Krustofski"
 ]
-
+// creating team collections
 var teamDragons: [String] = []
 var teamSharks: [String]  = []
 var teamRaptors: [String] = []
@@ -118,9 +121,11 @@ var hasExperience:[String] = []
 var noExperience:[String] = []
 
 
-
+// creating player collection to loop over when need
 var players = [player0, player1, player2, player3, player4, player5, player6, player7, player8, player9, player10, player11, player12, player13, player14, player15, player16, player17]
 
+
+// Logic is sort by experience // pulling out based on experience and soritng
 for player in players {
     var index = 0
     for (key,value) in player {
@@ -168,3 +173,36 @@ for String in noExperience {
 teamSharks
 teamDragons
 teamRaptors
+
+
+ var guardians:[String] = []
+ 
+ for guardian in players {
+ var index = 0
+ for (key,value) in guardian {
+ var index = 0
+ switch key {
+ case "Guardian Name": guardians.append(guardian[key]!)
+ default: print("")
+ index += 1
+ }
+ index += 1
+ }
+ }
+
+guardians
+guardians.count
+
+
+/*for guardianss in players {
+    for (value,key) in guardianss {
+        switch key {
+        case (guardianss(key) == teamSharks[String]) && (guardianss(key) == guardians[String]): print("\(teamSharks(String) is going to attend Team Shark match you \(guardians[String])" )
+        case players(key)
+        }
+    }
+}
+
+*/
+ 
+
